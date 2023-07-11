@@ -15,7 +15,9 @@ const App = () => {
     <>
         <Header name= "Brahim" job="full stack developper"  socials={socials} />
         <Nav/>
-        <About />
+        <About clients={34} experience ="2 years"  projects = {80}
+        aboutBio = "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        />
         <Experience />
         <Services />
         <Portfolio />
