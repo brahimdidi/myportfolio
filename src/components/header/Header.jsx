@@ -6,9 +6,10 @@ import HeaderSocials from './HeaderSocials';
 
 const Header = (props) => {
   const { socials , name , job } = props;
+  const scroll_down = "---->>";
   return (
     <header>
-      <div className="container header__contaiener">
+      <div className="container header-container">
         <h5>hello I'm </h5>
         <h1>{name} </h1>
         <h5 className='text-light'>{job}</h5>
@@ -17,7 +18,7 @@ const Header = (props) => {
         <div className="myself">
           <img src={MYSELF} alt="" />
         </div>
-        <a href="#contact" className='scroll__down'>Scroll down</a>
+        <a href="#contact" className='scroll-down'>{scroll_down} </a>
       </div>
 
     </header>

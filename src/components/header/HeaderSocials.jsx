@@ -4,7 +4,7 @@ import {BsLinkedin , BsGithub , BsTwitter} from 'react-icons/bs';
 const HeaderSocials = (socials) => {
     const {linkedin, github, twitter} = socials.socials;
   return (
-    <div className="header__socials">
+    <div className="header-socials">
         <a href={linkedin} target="_blank" rel="noopener noreferrer">
             <BsLinkedin />
         </a>
