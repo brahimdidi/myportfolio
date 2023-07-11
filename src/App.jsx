@@ -10,10 +10,11 @@ import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 
 const App = () => {
+  let socials = {linkedin: 'none.com', github: 'none.com', twitter: 'none.com'}
   return (
     <>
-        <Header />
-        <Nav />
+        <Header name= "Brahim" job="full stack developper"  socials={socials} />
+        <Nav/>
         <About />
         <Experience />
         <Services />
