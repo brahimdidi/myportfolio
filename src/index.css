@@ -125,6 +125,7 @@ img {
     margin-top: 6rem;
   }
 }
+
 /* media queries phone  */
 @media (max-width: 600px) {
   .container {
