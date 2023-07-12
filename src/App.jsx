@@ -81,7 +81,7 @@ updateColors();
   return (
     <>
         <ToastContainer position='top-center' autoClose= {1400} theme={darkTheme ? 'dark' : 'light'} className="toast-container" />
-        <button id='toggle-mode' onClick={toggleDarkMode}> toggle mode</button>
+        <button className='btn ' id='toggle-mode' onClick={toggleDarkMode}>{ darkTheme ? "light mode " : "dark mode "}</button>
         <Header name= "Brahim" job="full stack developper"  socials={socials} />
         <Nav/>
         <About  about = {about}/>
