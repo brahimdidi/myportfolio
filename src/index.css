@@ -120,6 +120,9 @@ img {
 .text-capitalize {
   text-transform: capitalize;
 }
+.d-none {
+  display: none;
+}
 
 /* media queries (tablets)  */
 
@@ -141,5 +144,8 @@ img {
 
   section {
     margin-top: 2rem;
+  }
+  .toast-container {
+    margin-top: 10px
   }
 }

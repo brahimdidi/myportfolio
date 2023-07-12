@@ -13,8 +13,10 @@ const Nav = () => {
       a.addEventListener('click', () => setActive('contact'));
     }
   }
+  
+
   return (
-    <nav>
+    <nav className='navbar'>
       <a href="#"
       onClick={() => setActive('#')} 
       className={active === '#' ? 'active' : ''}
@@ -35,7 +37,6 @@ const Nav = () => {
       onClick={() => setActive('contact')} 
       className={active === 'contact' ? 'active' : ''}
       > <TbMessageDots /> </a>
-
     </nav>
   )
 }

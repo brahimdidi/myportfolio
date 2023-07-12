@@ -5,8 +5,8 @@ import {FiAward}  from 'react-icons/fi';
 import {FiUsers}  from 'react-icons/fi';
 import {VscFolderLibrary}  from 'react-icons/vsc';
 
-const About = (props) => {
-  const { clients , experience, projects, aboutBio } = props;
+const About = ({about}) => {
+  const { clients , experience, projects, aboutBio } = about;
   return (
     <section id="about">
       <h5>Get to know </h5>

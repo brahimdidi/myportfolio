@@ -20,6 +20,7 @@ nav a {
   background: transparent;
   padding: 0.9rem;
   border-radius: 50%;
+
 }
 
 nav a:hover {
@@ -30,3 +31,4 @@ nav a.active {
   background: var(--color-light);
   color: var(--color-white);
 }
+
