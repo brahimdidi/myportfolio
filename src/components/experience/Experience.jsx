@@ -5,9 +5,9 @@ import {BsPatchCheckFill} from 'react-icons/bs';
 const Experience = (props) => {
   const {frontend, backend} = props;
 
-  const experienceItem = (i) => {
+  const experienceItem = (i, index) => {
     return (
-      <article className='experience-details' key={i.field}>
+      <article key={index} className='experience-details'>
         <BsPatchCheckFill className='experience-details-icon' />
         <div>
           <h4>{i.field}</h4>
@@ -27,13 +27,13 @@ const Experience = (props) => {
         <div className="experience-f">
           <h3>Frontend Development</h3>
           <div className="experience-content">
-            {frontend.map(item => experienceItem(item))}
+            {frontend.map((item, index) => experienceItem(item, index))}
           </div>
         </div>
         <div className="experience-b">
           <h3>Backend Development</h3>
           <div className="experience-content">
-          {backend.map(item => experienceItem(item))}
+          {backend.map((item, index) => experienceItem(item, index))}
           </div>
         </div>
       </div>

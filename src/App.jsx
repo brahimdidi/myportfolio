@@ -26,6 +26,16 @@ const App = () => {
     {field: 'FIREBASE', level: 'Experienced'},
     {field: 'C SHARP ASP.NET CORE', level: 'Not Experienced'},
     ];
+  const services = [
+    {title: 'Web Development', list: ['HTML', 'CSS', 'JAVASCRIPT', 'REACT JS', 'REDUX REDUX TOOLKIT', 'REACT NATIVE', 'FLUTTER']},
+    {title: 'Backend Development', list: ['Ruby on Rails', 'POSTGRESQL', 'FIREBASE', 'C SHARP ASP.NET CORE']},
+    {title: 'Mobile Development', list: ['REACT NATIVE', 'FLUTTER']},
+  ];
+  const portfolios = [
+    {title: 'school app', image: 'https://l8.nu/rIKf', githubLink: 'https://github.com/brahimdidi/Budget-app', liveDemo: 'https://github.com/brahimdidi/Budget-app'},
+    {title: 'shopping website', image: 'https://l8.nu/rIKf', githubLink: 'https://github.com/brahimdidi/Budget-app', liveDemo: 'https://github.com/brahimdidi/Budget-app'},
+    {title: 'live sport app', image: 'https://l8.nu/rIKf', githubLink: 'https://github.com/brahimdidi/Budget-app', liveDemo: 'https://github.com/brahimdidi/Budget-app'},
+  ]
 
   return (
     <>
@@ -35,8 +45,8 @@ const App = () => {
         aboutBio = "Lorem ipsum dolor sit amet consectetur adipisicing elit."
         />
         <Experience frontend={experienceFrontend} backend = {experienceBackend} />
-        <Services />
-        <Portfolio />
+        <Services services = {services} />
+        <Portfolio portfolios = {portfolios} />
         <Testimonials />
         <Contact />
         <Footer />
