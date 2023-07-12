@@ -36,6 +36,10 @@ const App = () => {
     {title: 'shopping website', image: 'https://l8.nu/rIKf', githubLink: 'https://github.com/brahimdidi/Budget-app', liveDemo: 'https://github.com/brahimdidi/Budget-app'},
     {title: 'live sport app', image: 'https://l8.nu/rIKf', githubLink: 'https://github.com/brahimdidi/Budget-app', liveDemo: 'https://github.com/brahimdidi/Budget-app'},
   ]
+  const testimonials = [
+    {name: 'brahim didi', image: 'https://l8.nu/rIKf', review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'},
+    {name: 'bamo min', image: 'https://l8.nu/rIKf', review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'},
+  ]
 
   return (
     <>
@@ -47,7 +51,7 @@ const App = () => {
         <Experience frontend={experienceFrontend} backend = {experienceBackend} />
         <Services services = {services} />
         <Portfolio portfolios = {portfolios} />
-        <Testimonials />
+        <Testimonials testimonials = {testimonials} />
         <Contact />
         <Footer />
 
