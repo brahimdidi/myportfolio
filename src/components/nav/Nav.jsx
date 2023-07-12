@@ -7,6 +7,12 @@ import {RiServiceLine} from 'react-icons/ri';
 import {TbMessageDots} from 'react-icons/tb';
 const Nav = () => {
   const [active, setActive] = useState('#');
+
+  for (const a of document.querySelectorAll("a")) {
+    if (a.textContent.includes("ontact")) {
+      a.addEventListener('click', () => setActive('contact'));
+    }
+  }
   return (
     <nav>
       <a href="#"
