@@ -20,21 +20,21 @@ const About = (props) => {
         </div>
         <div className="about-content">
           <div className="about-cards">
-            <artice className="about-card">
+            <article className="about-card">
               <FiAward  className='about-card-icon'/>
               <h5>Experience</h5>
               <small>{experience}</small>
-            </artice>
-            <artice className="about-card">
+            </article>
+            <article className="about-card">
               <FiUsers  className='about-card-icon'/>
               <h5>Clients</h5>
               <small>{clients}+</small>
-            </artice>
-            <artice className="about-card">
+            </article>
+            <article className="about-card">
               <VscFolderLibrary  className='about-card-icon'/>
               <h5>Projects</h5>
               <small>{projects}+ completed projects</small>
-            </artice>
+            </article>
 
           </div>
           <p>{aboutBio}</p>
