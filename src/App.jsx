@@ -10,7 +10,23 @@ import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 
 const App = () => {
-  let socials = {linkedin: 'none.com', github: 'none.com', twitter: 'none.com'}
+  const socials = {linkedin: 'none.com', github: 'none.com', twitter: 'none.com'};
+  const experienceFrontend = [
+      {field:'HTML', level: 'Very Experienced'}, 
+      {field: 'CSS', level: 'Experienced'},
+      {field: 'JAVASCRIPT', level: 'Very Experienced'},
+      {field: 'REACT JS', level: ' Very Experienced'},
+      {field: 'REDUX REDUX TOOLKIT', level: ' Very Experienced'},
+      {field: 'REACT NATIVE', level: 'Not Experienced'},
+      {field: 'FLUTTER', level: 'Not Experienced'},
+      ];
+  const experienceBackend =  [
+    {field:'Ruby on Rails', level: 'Very Experienced'}, 
+    {field: 'POSTGRESQL', level: 'Experienced'},
+    {field: 'FIREBASE', level: 'Experienced'},
+    {field: 'C SHARP ASP.NET CORE', level: 'Not Experienced'},
+    ];
+
   return (
     <>
         <Header name= "Brahim" job="full stack developper"  socials={socials} />
@@ -18,7 +34,7 @@ const App = () => {
         <About clients={34} experience ="2 years"  projects = {80}
         aboutBio = "Lorem ipsum dolor sit amet consectetur adipisicing elit."
         />
-        <Experience />
+        <Experience frontend={experienceFrontend} backend = {experienceBackend} />
         <Services />
         <Portfolio />
         <Testimonials />
