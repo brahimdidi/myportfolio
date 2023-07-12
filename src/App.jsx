@@ -12,9 +12,33 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-
 const App = () => {
-  const [appTheme, setAppTheme] = useState('dark');
+  const [darkTheme, setDarkTheme] = useState(true);  
+  // update colors on theme change
+  const toggleDarkMode = () => {
+    setDarkTheme(!darkTheme);
+    updateColors();
+  };
+
+  const updateColors = () => {
+    const root = document.documentElement;
+    if (darkTheme) {
+      root.style.setProperty('--color-bg', '#1f1f38');
+      root.style.setProperty('--color-bg-variant', '#2c2c6c');
+      root.style.setProperty('--color-primary', '#4db5ff');
+      root.style.setProperty('--color-priamry-variant', 'rgba(77, 181, 255, 0.4)');
+      root.style.setProperty('--color-white', '#fff');
+      root.style.setProperty('--color-light', 'rgba(255, 255, 255, 0.6)');
+    } else {
+      root.style.setProperty('--color-bg', '#ffffff');
+      root.style.setProperty('--color-bg-variant', '#f2f2f2');
+      root.style.setProperty('--color-primary', '#1969ff');
+      root.style.setProperty('--color-priamry-variant', 'rgba(25, 105, 255, 0.4)');
+      root.style.setProperty('--color-white', '#1f1f38');
+      root.style.setProperty('--color-light', 'rgba(31, 31, 56, 0.6)');
+    }
+  };
+  // genrate random data
   const socials = { linkedin: 'none.com', github: 'none.com', twitter: 'none.com' };
   const about =  { clients:34, experience :"2 years" , projects : 80 ,
   aboutBio : "Lorem ipsum dolor sit amet consectetur adipisicing elit." }
@@ -53,9 +77,11 @@ const App = () => {
     {type: 'messenger', value: 'brahim didi', link: 'https://m.me/brahim.didi.7'},
   ]
 
+updateColors();
   return (
     <>
-        <ToastContainer position='top-center' autoClose= {1400} theme={appTheme} className="toast-container" />
+        <ToastContainer position='top-center' autoClose= {1400} theme={darkTheme ? 'dark' : 'light'} className="toast-container" />
+        <button id='toggle-mode' onClick={toggleDarkMode}> toggle mode</button>
         <Header name= "Brahim" job="full stack developper"  socials={socials} />
         <Nav/>
         <About  about = {about}/>
@@ -70,4 +96,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
