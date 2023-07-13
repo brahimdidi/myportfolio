@@ -29,6 +29,16 @@ nav a:hover {
 
 nav a.active {
   background: var(--color-light);
-  color: var(--color-white);
+  color: var(--color-bg);
 }
 
+
+@media screen and (max-width: 600px) {
+  .nav-up {
+    bottom: unset;
+    top: 2rem;
+  }
+  nav {
+    bottom: 1rem;
+  }
+}

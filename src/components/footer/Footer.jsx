@@ -6,18 +6,18 @@ const Footer = ({socials}) => {
   return (
     <footer>
       <a href="#" className='footer-logo'>Brahim</a>
-      <ul className="permalinks">
-        <li> <a className='text-capitalize' href="#">home</a></li>
-        <li> <a className='text-capitalize' href="#about">about</a></li>
-        <li> <a className='text-capitalize' href="#services">services</a></li>
-        <li> <a className='text-capitalize' href="#portfolioi">portfolio</a></li>
-        <li> <a className='text-capitalize' href="#testimonials">testimonials</a></li>
-      </ul>
+      <div className="permalinks">
+         <a className='text-capitalize' href="#">home</a>
+         <a className='text-capitalize' href="#about">about</a>
+         <a className='text-capitalize' href="#services">services</a>
+         <a className='text-capitalize' href="#portfolio">portfolio</a>
+         <a className='text-capitalize' href="#testimonials">testimonials</a>
+      </div>
       <div className="footer-socials">
-        <a href={facebook}> <FaFacebookF /> </a>
-        <a href={linkedin}> <FaLinkedinIn /> </a>
-        <a href={twitter}> <FaTwitter /> </a>
-        <a href={github}> <FaGithub /> </a>
+        <a target='_blank' href={facebook}><FaFacebookF /></a>
+        <a target='_blank' href={linkedin}><FaLinkedinIn /></a>
+        <a target='_blank' href={twitter}><FaTwitter /></a>
+        <a target='_blank' href={github}><FaGithub /></a>
       </div>
       <div className="footer-copyright">
         <small>&copy; Didify. All rights reserved, 2023.</small>
