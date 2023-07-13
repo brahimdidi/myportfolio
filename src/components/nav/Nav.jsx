@@ -1,18 +1,36 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './nav.css';
 import {AiOutlineHome} from 'react-icons/ai';
 import {AiOutlineUser} from 'react-icons/ai';
 import {BiBook} from 'react-icons/bi';
 import {RiServiceLine} from 'react-icons/ri';
 import {TbMessageDots} from 'react-icons/tb';
-const Nav = () => {
+const Nav = (props) => {
   const [active, setActive] = useState('#');
+  const { aboutRef, experienceRef, contactRef, servicesRef, homeRef } = props;
+  const tobeObserved = [aboutRef, experienceRef, contactRef, servicesRef, homeRef];
 
-  for (const a of document.querySelectorAll("a")) {
-    if (a.textContent.includes("ontact")) {
-      a.addEventListener('click', () => setActive('contact'));
-    }
-  }
+    useEffect(() => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            let v = entry.target.id;
+            v == 'header' ? v = '#' : v = v;
+            setActive(v);
+          }
+        });
+      });
+    
+      tobeObserved.forEach((element) => {
+        if (element.current && element.current instanceof Element) {
+          observer.observe(element.current);
+        } else {
+          console.error("Invalid element:", element.current);
+        }
+      });
+    }, []);
+    
+
   
 
   return (
