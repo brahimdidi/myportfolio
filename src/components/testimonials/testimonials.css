@@ -1,54 +1,59 @@
 .container.testimonials-container {
-    width: 40%;
-    padding-bottom: 2.5rem;
+  width: 40%;
+  padding-bottom: 2.5rem;
 }
+
 #testimonials > h2 {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
+
 .client-avatar {
-    width: 4rem;
-    aspect-ratio: 1/1;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    border: 0.4rem solid var(--color-primary-variant);
+  width: 4rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 0.4rem solid var(--color-primary-variant);
 }
 
 .testimonial {
-    background: var(--color-bg-variant);
-    text-align: center;
-    padding: 2rem;
-    border-radius: 1rem;
-    user-select: none;
-}
-.client-review {
-    color: var(--color-light);
-    font-weight: 300;
-    display: block;
-    width: 80% ;
-    margin: 0.8rem auto 0;
+  background: var(--color-bg-variant);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  user-select: none;
 }
 
-.swiper-pagination-clickable .swiper-pagination-bullet  {
-    background: var(--color-primary);
-    /* opacity: 0.5;
+.client-review {
+  color: var(--color-light);
+  font-weight: 300;
+  display: block;
+  width: 80%;
+  margin: 0.8rem auto 0;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background: var(--color-primary);
+
+  /* opacity: 0.5;
     transition: var(--transition); */
 }
 
 /* media queries (tablets)  */
 
 @media (max-width: 1024px) {
-    .container.testimonials-container {
-        width: 60%;
-    }
+  .container.testimonials-container {
+    width: 60%;
   }
-  /* media queries phone  */
-  @media (max-width: 600px) {
-    .container.testimonials-container {
-        width: var(--container-width-sm);
-    }
-    .client-review {
-        width: var(--container-width-sm);
-    }
+}
+
+/* media queries phone  */
+@media (max-width: 600px) {
+  .container.testimonials-container {
+    width: var(--container-width-sm);
   }
-  
+
+  .client-review {
+    width: var(--container-width-sm);
+  }
+}

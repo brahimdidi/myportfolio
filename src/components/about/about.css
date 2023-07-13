@@ -1,6 +1,7 @@
 .about {
   margin-bottom: 3rem;
 }
+
 .about-container {
   display: grid;
   grid-template-columns: 35% 50%;
@@ -110,8 +111,8 @@
   .about-content p {
     margin: 1rem 0;
   }
+
   .about {
     margin-bottom: unset;
   }
 }
-
