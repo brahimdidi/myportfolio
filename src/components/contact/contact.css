@@ -51,6 +51,9 @@
     color: var(--color-white);
     resize: none;
 }
+.contact-form > button {
+    width: 100%;
+}
 
 
 /* media queries (tablets)  */
@@ -60,6 +63,9 @@
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+    .loader {
+        margin: 0 auto;
+    }
   }
   
   /* media queries phone  */
@@ -67,7 +73,5 @@
     .container.container-contact {
         width: var(--container-width-sm);
     }
-    .contact-form > button {
-        width: 100%;
-    }
+    
   }

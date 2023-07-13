@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './components/header/Header';
 import About from './components/about/About';
 import Nav from './components/nav/Nav';
@@ -16,13 +16,14 @@ const App = () => {
   const [darkTheme, setDarkTheme] = useState(true);  
   // update colors on theme change
   const toggleDarkMode = () => {
+    updateColors(!darkTheme);
     setDarkTheme(!darkTheme);
-    updateColors();
   };
 
-  const updateColors = () => {
+  const updateColors = (d) => {
     const root = document.documentElement;
-    if (darkTheme) {
+    if (d) {
+      
       root.style.setProperty('--color-bg', '#1f1f38');
       root.style.setProperty('--color-bg-variant', '#2c2c6c');
       root.style.setProperty('--color-primary', '#4db5ff');
@@ -72,16 +73,19 @@ const App = () => {
     {name: 'bamo min', image: 'https://l8.nu/rIKf', review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'},
   ]
   const contactOptions = [
-    {type: 'whatsapp', value: '+222 42524652', link: 'https://wa.me/212666666666'},
+    // {type: 'whatsapp', value: '+222 42524652', link: 'https://wa.me/212666666666'},
     {type: 'email', value: 'brahimgb1team@gmail.com', link: 'mailto:'},
     {type: 'messenger', value: 'brahim didi', link: 'https://m.me/brahim.didi.7'},
   ]
 
-updateColors();
+useEffect(() => {
+    updateColors(darkTheme);
+}, []);
+
   return (
     <>
         <ToastContainer position='top-center' autoClose= {1400} theme={darkTheme ? 'dark' : 'light'} className="toast-container" />
-        <button className='btn ' id='toggle-mode' onClick={toggleDarkMode}>{ darkTheme ? "light mode " : "dark mode "}</button>
+        <button style={{margin: "0.1rem"}} className='btn ' id='toggle-mode' onClick={toggleDarkMode}>{ darkTheme ? "light mode " : "dark mode "}</button>
         <Header name= "Brahim" job="full stack developper"  socials={socials} />
         <Nav/>
         <About  about = {about}/>
@@ -94,6 +98,6 @@ updateColors();
 
     </>
   )
-}
+};
 
 export default App;
