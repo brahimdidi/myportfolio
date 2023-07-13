@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import './experience.css';
 import {BsPatchCheckFill} from 'react-icons/bs';
 
-const Experience = (props) => {
+const Experience = forwardRef((props, ref) => {
   const {frontend, backend} = props;
 
   const experienceItem = (i, index) => {
@@ -20,7 +20,7 @@ const Experience = (props) => {
   }
 
   return (
-    <section id="experience">
+    <section id="experience" ref={ref}>
       <h5>What skills I have</h5>
       <h2>My Experience</h2>
       <div className="container experience-container">
@@ -39,6 +39,6 @@ const Experience = (props) => {
       </div>
     </section>
   )
-}
+});
 
 export default Experience;

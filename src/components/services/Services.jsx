@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import './services.css';
 import { BiCheck } from 'react-icons/bi';
 
-const Services = (props) => {
+const Services = forwardRef((props, ref) => {
   const { services } = props;
 
   const serviceItem = (i, index) => {
@@ -27,7 +27,7 @@ const Services = (props) => {
     )
   }
   return (
-    <section id='services'>
+    <section id='services' ref={ref}>
       <h5>What I offer</h5>
       <h2>Services</h2>
       <div className="container services-container">
@@ -35,6 +35,6 @@ const Services = (props) => {
       </div>
     </section>
   )
-}
+});
 
 export default Services;

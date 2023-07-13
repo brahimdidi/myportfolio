@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import './about.css';
 import MYSELF from '../../assets/me.png';  
 import {FiAward}  from 'react-icons/fi';
 import {FiUsers}  from 'react-icons/fi';
 import {VscFolderLibrary}  from 'react-icons/vsc';
 
-const About = ({about}) => {
+const About = forwardRef((props, ref) => {
+  const { about } = props;
   const { clients , experience, projects, aboutBio } = about;
   return (
-    <section id="about">
+    <section className='about' id="about" ref={ref}>
       <h5>Get to know </h5>
       <h2>About Me</h2>
 
@@ -43,6 +44,6 @@ const About = ({about}) => {
       </div>
     </section>
   )
-};
+});
 
 export default About;

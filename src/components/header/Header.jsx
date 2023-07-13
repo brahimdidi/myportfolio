@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import './header.css';
 import CTA from './CTA';
 import MYSELF from '../../assets/me.png';
 import HeaderSocials from './HeaderSocials';
+import {FiChevronsDown} from 'react-icons/fi';
 
-const Header = (props) => {
+const Header = forwardRef((props,ref) => {
   const { socials , name , job } = props;
-  const scroll_down = "---->>";
   return (
-    <header>
+    <header id='header' ref={ref}>
       <div className="container header-container">
         <h5>hello I'm </h5>
         <h1>{name} </h1>
@@ -18,11 +18,13 @@ const Header = (props) => {
         <div className="myself">
           <img src={MYSELF} alt="" />
         </div>
-        <a href="#contact" className='scroll-down'>{scroll_down} </a>
+        <a href="#contact" className='scroll-down'>
+          <FiChevronsDown />
+        </a>
       </div>
 
     </header>
   )
-}
+});
 
 export default Header;

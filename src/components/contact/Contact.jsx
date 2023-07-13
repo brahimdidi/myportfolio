@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import './contact.css';
 import { BsWhatsapp } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
@@ -9,7 +9,7 @@ import emailjs from '@emailjs/browser';
 
 import { toast } from 'react-toastify';
 
-const Contact = (props) => {
+const Contact = forwardRef((props,ref) => {
   const { contactOptions } = props;
   const notify = (e) => toast(e);
   const [loading, setLoading] = useState(false);
@@ -46,7 +46,7 @@ const Contact = (props) => {
       e.target.reset();
   };
   return (
-    <section id="contact">
+    <section id="contact" ref={ref}>
       <h5>Get in touch</h5>
       <h2>Contact Me</h2>
       <div className="container container-contact">
@@ -70,6 +70,6 @@ const Contact = (props) => {
       </div>
     </section>
   )
-}
+});
 
 export default Contact;
