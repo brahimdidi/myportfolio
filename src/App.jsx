@@ -40,7 +40,7 @@ const App = () => {
     }
   };
   // genrate random data
-  const socials = { linkedin: 'none.com', github: 'none.com', twitter: 'none.com' };
+  const socials = { linkedin: 'none.com', github: 'none.com', twitter: 'none.com', facebook: 'none.com' };
   const about =  { clients:34, experience :"2 years" , projects : 80 ,
   aboutBio : "Lorem ipsum dolor sit amet consectetur adipisicing elit." }
   const experienceFrontend = [
@@ -78,6 +78,7 @@ const App = () => {
     {type: 'messenger', value: 'brahim didi', link: 'https://m.me/brahim.didi.7'},
   ]
 
+
 useEffect(() => {
     updateColors(darkTheme);
 }, []);
@@ -94,7 +95,7 @@ useEffect(() => {
         <Portfolio portfolios = {portfolios} />
         <Testimonials testimonials = {testimonials} />
         <Contact contactOptions = {contactOptions} />
-        <Footer />
+        <Footer socials = { socials } />
 
     </>
   )
